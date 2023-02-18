@@ -55,11 +55,12 @@ html,body{
 }
 .id{
 	font-size: 25px;
-	font-family: Rajdhani sans-serif;
+	font-family: Times New Roman sans-serif;
 }
 
 header{
-	font-family: 'Secular One', sans-serif;
+	/*font-family: 'Secular One', sans-serif;*/
+	font-familu: 'Rajdhani';
 	font-size: 35px;
 	color: white;
 	height: 100px;
