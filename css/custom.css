@@ -46,8 +46,7 @@ html,body{
 	height: 100%;
 	overflow-x: hidden;
 	-ms-overflow-style:none;
-	background-color: black;
-	/*background-image: linear-gradient(to right, #000000 , #000000);*/
+	background-image: linear-gradient(to right, #000000 , #000000);
 }
 
 .outer{
@@ -59,8 +58,7 @@ html,body{
 }
 
 header{
-	/*font-family: 'Secular One', sans-serif;*/
-	font-family: 'Rajdhani';
+	font-family: 'Secular One', sans-serif;
 	font-size: 35px;
 	color: white;
 	height: 100px;
