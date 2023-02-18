@@ -46,8 +46,8 @@ html,body{
 	height: 100%;
 	overflow-x: hidden;
 	-ms-overflow-style:none;
-	/*background-color: black;*/
-	background-image: linear-gradient(to right, #000000 , #000000);
+	background-color: black;
+	/*background-image: linear-gradient(to right, #000000 , #000000);*/
 }
 
 .outer{
