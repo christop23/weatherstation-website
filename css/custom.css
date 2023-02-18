@@ -20,7 +20,7 @@
 	margin-top: 5%;
 }
 .sha:hover{
-  box-shadow: 0 0 40px 2px #072f42;
+  box-shadow: 0 0 40px 2px #4f0f1f;
   transform: scale(1.01);
 }
 .sha{
@@ -36,7 +36,7 @@ meter::-webkit-meter-optimum-value {
 
 marquee{
 	font-size: 21px;
-	background-color: #0b3948;
+	background-color: #c7264e;
 	font-weight: 700;
 	/*opacity: .5;*/
 	color: white;
@@ -46,8 +46,8 @@ html,body{
 	height: 100%;
 	overflow-x: hidden;
 	-ms-overflow-style:none;
-	/*background-color: #167D7F;*/
-	background-image: linear-gradient(to right, #d0cdd7 , #e5e6f4);
+	background-color: #110b11;
+	/*background-image: linear-gradient(to right, #d0cdd7 , #e5e6f4);*/
 }
 
 .outer{
@@ -76,7 +76,7 @@ header{
 }
 
 header,footer{
-	background-color: #0b3948;
+	background-color: #c7264e;
 }
 footer{
 	position: fixed;
