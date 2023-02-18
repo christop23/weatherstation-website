@@ -46,7 +46,7 @@ html,body{
 	height: 100%;
 	overflow-x: hidden;
 	-ms-overflow-style:none;
-	background-color: #110b11;
+	background-color: black;
 	/*background-image: linear-gradient(to right, #d0cdd7 , #e5e6f4);*/
 }
 
