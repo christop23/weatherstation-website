@@ -36,7 +36,7 @@ meter::-webkit-meter-optimum-value {
 
 marquee{
 	font-size: 21px;
-	background-color: #29A0B1;
+	background-color: #0b3948;
 	font-weight: 700;
 	/*opacity: .5;*/
 	color: white;
@@ -47,7 +47,7 @@ html,body{
 	overflow-x: hidden;
 	-ms-overflow-style:none;
 	/*background-color: #167D7F;*/
-	background-image: linear-gradient(to right, #98D7C2 , #29A0B1);
+	background-image: linear-gradient(to right, #d0cdd7 , #e5e6f4);
 }
 
 .outer{
@@ -76,7 +76,7 @@ header{
 }
 
 header,footer{
-	background-color: #29A0B1;
+	background-color: #0b3948;
 }
 footer{
 	position: fixed;
