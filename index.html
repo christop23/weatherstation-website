@@ -225,6 +225,10 @@
             clo.innerHTML = c+"&nbsp;%";
 
             var d = document.getElementById("deg");
+            
+               var t = data["temp"];
+               let temp = document.getElementById("temp");
+               temp.innerHTML = t+"&nbsp;&#8451";
 
             var deg = data["wind"]["deg"];
             var div = document.createElement("div");
@@ -289,29 +293,29 @@
         // document.write(data[i]);
         // document.getElementById("temp").innerHTML=(data[i]);
     }
-    var t = data["temp"];
-    let temp = document.getElementById("temp");
-    temp.innerHTML = t+"&nbsp;&#8451";
+  //  var t = data["temp"];
+   // let temp = document.getElementById("temp");
+   // temp.innerHTML = t+"&nbsp;&#8451";
 
-    var h = data["hum"];
-    let hum = document.getElementById("hum");
-    hum.innerHTML = h+"&nbsp;g.&#13221;";
+   // var h = data["hum"];
+   // let hum = document.getElementById("hum");
+  //  hum.innerHTML = h+"&nbsp;g.&#13221;";
 
-    var p = data["pressure"];
-    let pre = document.getElementById("pre");
-    pre.innerHTML = p+"&nbsp;hPa";
+   // var p = data["pressure"];
+   // let pre = document.getElementById("pre");
+  //  pre.innerHTML = p+"&nbsp;hPa";
 
-    var a = data["altitude"];
-    let alti = document.getElementById("alti");
-    alti.innerHTML = a+"&nbsp;meter";
+   // var a = data["altitude"];
+   // let alti = document.getElementById("alti");
+   // alti.innerHTML = a+"&nbsp;meter";
 
-    var l = data["lightindex"];
-    let light = document.getElementById("light");
-    light.innerHTML = l+"&nbsp;lm/&#13217;";
+   // var l = data["lightindex"];
+  //  let light = document.getElementById("light");
+  //  light.innerHTML = l+"&nbsp;lm/&#13217;";
 
-    var u =data["uvindex"];
-    let uv =document.getElementById("uvindex");
-    uvindex.innerHTML = u+"&nbsp;mW/&#13216;";
+   // var u =data["uvindex"];
+  //  let uv =document.getElementById("uvindex");
+  //  uvindex.innerHTML = u+"&nbsp;mW/&#13216;";
 })
 </script>
 </body>
