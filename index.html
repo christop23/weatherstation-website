@@ -226,10 +226,27 @@
 
             var d = document.getElementById("deg");
             
-               var t = data["temp"];
-               let temp = document.getElementById("temp");
-               temp.innerHTML = t;
+            function getTemperature() {
+  fetch('https://api.openweathermap.org/data/2.5/weather?q=nandikkara&appid=d37f120ee7b3143054979cbc19bb094d&units=metric')
+    .then(response => response.json())
+    .then(data => {
+      temp = data.main.temp;
+      document.getElementById('temperature').textContent = temperature + "°C";
+    })
+    .catch(error => console.error(error));
+}
 
+          
+            
+            
+            
+            
+               //var t = data["temp"];
+               //let temp = document.getElementById("temp");
+              // temp.innerHTML = t;
+
+            
+            
             var deg = data["wind"]["deg"];
             var div = document.createElement("div");
             div.innerHTML = `<span>${direction(deg)}</span>`;
