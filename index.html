@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <META HTTP-EQUIV="Refresh" CONTENT=1800>
+    <title>Weather Station PNC</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
+        .header-text {
+            font-size: 21px;
+            font-weight: 500;
+        }
+        .clock {
+            font-size: 21px;
+            font-weight: 500;
+        }
+        .outer {
+            padding: 10px;
+        }
+        .sha {
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            font-family: 'Chakra Petch', sans-serif;
+        }
+        .im {
+            margin-bottom: 20px;
+            width: 100px;
+            height: 100px;
+        }
+        .id {
+            font-size: 28px;
+            font-weight: 600;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <header>
+                <p class="header-text mb-0">Weather Station Beta Feb23</p>
+                <p class="header-text">This project is still in beta and is scheduled to launch officially on 28th February</p>
+            </header>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <span id="clock" class="clock">
+                <span class="float-md-start">Clock:</span>
+            </span>
+        </div>
+        <div class="col-md-6">
+            <span class="clock">
+                <a href="https://goo.gl/maps/fFyjZojYYdkhdaeD7" target="_blank" style="color: inherit;text-decoration: none;">
+                    <i class="fa-solid fa-map-location-dot"></i>: Pudukkad
+                </a>
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 outer">
+            <div class="sha">
+                <h2 class="animate__animated animate__tada">Temperature</h2>
+                <img src="images/hot.gif" class="im">
+                <p id="temp" class="id"></p>
+            </div>
+        </div>
+        <div class="col-md-3 outer">
+            <div class="sha">
+                <h2 class="animate__animated animate__tada">Humidity</h2>
+                <img src="images/drop.gif" class="im"><br><!-- hum.png -->
+                    <p id="hum" class="id"></p>
+
+                </div>
+            </div>
+            <div class="col-md-3 outer">
+                <div class="sha">
+                    <h2 class="animate__animated animate__tada">Pressure</h2>
+                    <img src="images/meter.gif" class="im"><br>
+                    <p id="pre" class="id"></p>
+                </div>
+            </div>
+            <div class="col-md-3 outer">
+                <div class="sha">
+                    <h2 class="animate__animated animate__tada">Wind Speed</h2>
+                    <img src="images/wind.gif" class="im"><br>
+                    <p id="wind" class="id"></p>
+                </div>
+            </div>
+            <div class="col-md-3 outer">
+                <div class="sha">
+                    <h2 class="animate__animated animate__tada">Altitude</h2>
+                    <img src="images/goal.gif" class="im"><br><!-- alti.png -->
+                    <p id="alti" class="id"></p>
+                </div>
+            </div>
+            <div class="col-md-3 outer">
+                <div class="sha">
+                    <h2 class="animate__animated animate__tada">UV</h2>
+                    <img src="images/sunny.gif" class="im"><br><!-- uv.png -->
+                    <p id="uvindex" class="id"></p>
+                </div>
+            </div>
+            <div class="col-md-3 outer">
+                <div class="sha">
+                    <h2 class="animate__animated animate__tada">Light</h2>
+                    <img src="images/sun.gif" class="im"><br><!-- light.png -->
+                    <p id="light" class="id"></p>
+                </div>
+            </div>
+            <div class="col-md-3 outer">
+                <div class="sha">
+                    <h2 class="animate__animated animate__tada">Wind Direction</h2>
+                    <img src="images/windy.gif" class="im"><br><!-- winddir1.png -->
+                    <!-- <p id="deg" class="id"></p> -->
+                    <p id="dir" class="id"></p>
+                </div>
+            </div>
+            <div class="col-md-3 outer">
+                <div class="sha">
+                    <h2 class="animate__animated animate__tada">Cloud</h2>
+                    <img src="images/clouds.gif" class="im"><br><!-- clouds1.png -->
+                    <p id="clo" class="id"></p>
+                </div>
+            </div>
+            <div class="col-md-3 outer">
+                <div class="sha">
+                    <h2 class="animate__animated animate__tada">Weather</h2>
+                    <img src="images/global-warming.gif" class="im"><br>
+                    <p id="rain" class="id"></p>
+                </div>
+            </div>
+            <div class="col-md-3 outer">
+                <div class="sha">
+                    <h2 class="animate__animated animate__tada">Sunrise</h2>
+                    <img src="images/sunrise.gif" class="im"><br>
+                    <p id="rise" class="id"></p>
+                </div>
+            </div>
+            <div class="col-md-3 outer">
+                <div class="sha">
+                    <h2 class="animate__animated animate__tada">Sunset</h2>
+                    <img src="images/sunset.gif" class="im"><br>
+                    <p id="set" class="id"></p>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+    <footer>
+        <p><!-- 2023&copy; Prajyoti Niketan College Weather Station-->2023&copy; Placeholder 028.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Created by Christo, Basil, Alex, Athul and Bhadru </p>
+    </footer>
+
+    <!------------------------Scripting------------------------->
+    <!-- <script src="js/main.js"></script> -->
+    <!------------------------Scripting------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script>
+        fetch("https://api.openweathermap.org/data/2.5/weather?q=nandikkara&appid=d37f120ee7b3143054979cbc19bb094d&units=metric")
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            appendData(data);
+        })
+        .catch(function (err) {
+            console.log('error: ' + err);
+        });
+        // function convertion(val) {
+        //     return (val - 273.15).toFixed(2);
+        // }
+        function direction(deg){
+            let direction;
+            if ((deg >0)&&(deg<22.5))
+                direction = "N";
+            else if ((deg>22.5) &&(deg<67.50))
+                direction = "NE";
+            else if ((deg>67.50) &&(deg<112.5))
+                direction = "E";
+            else if ((deg>112.5)&&(deg<157.5))
+                direction = "SE";
+            else if ((deg>157.5)&&(deg<202.5))
+                direction = "S";
+            else if ((deg>202.5)&&(deg<247.5))
+                direction = "SW";
+            else if ((deg>247.5)&&(deg<292.5))
+                direction = "W";
+            else if ((deg>292.5)&&(deg<337.5))
+                direction = "NW";
+            else 
+                direction = "N";
+            document.getElementById("dir").innerHTML = direction;
+        }
+        function appendData(data) {
+
+            var r = data["weather"];
+            var r1 = JSON.stringify(r);
+            var r2 = r1.split(',');
+            var r3 = r2[1].split(':');
+            let rain = document.getElementById("rain");
+            var r4 = r3[1].replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '');
+            rain.innerHTML = r4;
+
+            var sr = data["sys"]["sunrise"];
+            var s = new Date(sr*1000).toLocaleTimeString("en-US");
+            // console.log(s)
+            let rise = document.getElementById("rise");
+            rise.innerHTML = s;
+
+            var ss = data["sys"]["sunset"];
+            var s1 = new Date(ss*1000).toLocaleTimeString("en-US");
+            let set = document.getElementById("set");
+            set.innerHTML = s1;
+
+            var win = data["wind"]["speed"];
+            let wind = document.getElementById("wind");
+            wind.innerHTML =win+"&nbsp;m/s";
+
+            var c = data["clouds"]["all"];
+            let clo = document.getElementById("clo");
+            clo.innerHTML = c+"&nbsp;%";
+
+            var d = document.getElementById("deg");
+           
+            let temperature = data.main.temp;
+            let tempElement = document.getElementById("temp");
+            tempElement.innerHTML = temperature + "°C";
+
+            let pressure = data.main.pressure;
+            let pressureElement = document.getElementById("pre");
+            pressureElement.innerHTML = pressure + " hPa";
+            
+            var deg = data["wind"]["deg"];
+            var div = document.createElement("div");
+            div.innerHTML = `<span>${direction(deg)}</span>`;
+            d.appendChild(div);         
+        }
+
+        function currentTime() {
+          let date = new Date(); 
+          let hh = date.getHours();
+          let mm = date.getMinutes();
+          let ss = date.getSeconds();
+          let session = "AM";
+          let yy = date.getFullYear();
+          const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+          let mon = month[date.getMonth()];
+          let dd = date.getDate();
+          let da = dd+" "+mon+" "+yy+" ";
+
+
+
+          if(hh == 0){
+              hh = 12;
+          }
+          if(hh > 12){
+              hh = hh - 12;
+              session = "PM";
+          }
+
+          hh = (hh < 10) ? "0" + hh : hh;
+          mm = (mm < 10) ? "0" + mm : mm;
+          ss = (ss < 10) ? "0" + ss : ss;
+
+          let time = da+'\xa0\xa0\xa0\xa0\xa0\xa0\xa0'+hh + ":" + mm + ":" + ss + " " +session;
+
+          document.getElementById("clock").innerText = time; 
+          var t = setTimeout(function(){ currentTime() }, 1000); 
+
+      }
+      currentTime();
+  </script>
+  <!-- Configuration of firebase -->
+  <script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBREknnqGYEv2zBCZfKOfemHyH_AlZQLrU",
+    authDomain: "lavender-dd7ed.firebaseapp.com",
+    projectId: "lavender-dd7ed",
+    storageBucket: "lavender-dd7ed.appspot.com",
+    messagingSenderId: "954198102814",
+    appId: "1:954198102814:web:f6673d8679ec10a6246f0f",
+    measurementId: "G-86MV5C8R39"
+ };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    var firebaseRef = firebase.database().ref("devices");
+    firebaseRef.once("value",function(snapshot){
+      var data = snapshot.val();
+      for(let i in data){
+        console.log(data[i]);
+        // document.write(data[i]);
+        // document.getElementById("temp").innerHTML=(data[i]);
+    }
+  //  var t = data["temp"];
+   // let temp = document.getElementById("temp");
+   // temp.innerHTML = t+"&nbsp;&#8451";
+
+   // var h = data["hum"];
+   // let hum = document.getElementById("hum");
+  //  hum.innerHTML = h+"&nbsp;g.&#13221;";
+
+   // var p = data["pressure"];
+   // let pre = document.getElementById("pre");
+  //  pre.innerHTML = p+"&nbsp;hPa";
+
+   // var a = data["altitude"];
+   // let alti = document.getElementById("alti");
+   // alti.innerHTML = a+"&nbsp;meter";
+
+   // var l = data["lightindex"];
+  //  let light = document.getElementById("light");
+  //  light.innerHTML = l+"&nbsp;lm/&#13217;";
+
+   // var u =data["uvindex"];
+  //  let uv =document.getElementById("uvindex");
+  //  uvindex.innerHTML = u+"&nbsp;mW/&#13216;";
+})
+</script>
+</body>
+</html>
