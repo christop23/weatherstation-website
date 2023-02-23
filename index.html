@@ -230,7 +230,9 @@
             let tempElement = document.getElementById("temp");
             tempElement.innerHTML = temperature + "°C";
 
-            
+            let pressure = data.main.pressure;
+            let pressureElement = document.getElementById("pre");
+            pressureElement.innerHTML = pressure + " hPa";
             
             var deg = data["wind"]["deg"];
             var div = document.createElement("div");
